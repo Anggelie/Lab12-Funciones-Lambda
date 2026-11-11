@@ -1,37 +1,43 @@
-# Laboratorio No. 12 - Funciones lambda
+# Laboratorio No. 12 - Funciones lambda en Haskell
 
 Universidad del Valle de Guatemala  
 Ingeniería en Ciencia de la Computación y Tecnologías de la Información
 
 ## Descripción
 
-En este laboratorio se resuelven cuatro ejercicios en Python utilizando funciones lambda para trabajar con diccionarios, listas y matrices.
+Resolución de los cuatro ejercicios del laboratorio utilizando Haskell y expresiones lambda.
 
 ## Ejercicios
 
-1. **Ordenamiento de diccionarios:** ordena una lista de diccionarios según la clave que se ingrese. Archivo: `ejercicio1.py`.
-2. **Potencias:** eleva cada número de una lista a la potencia positiva indicada. Archivo: `ejercicio2.py`.
-3. **Matriz transpuesta:** obtiene la transpuesta de una matriz representada como lista de listas. Archivo: `ejercicio3.py`.
-4. **Eliminación de elementos:** quita de una lista los elementos que aparecen en otra lista. Archivo: `ejercicio4.py`.
+1. **Ordenar diccionarios por una clave:** se representa cada registro con un tipo `Telefono` y se ordena por `make`, `model` o `color`. Archivo: `Ejercicio1.hs`.
+2. **Potencias de una lista:** se eleva cada entero a la potencia positiva indicada. Archivo: `Ejercicio2.hs`.
+3. **Transpuesta de una matriz:** se intercambian las filas y columnas mediante expresiones lambda. Archivo: `Ejercicio3.hs`.
+4. **Eliminar elementos:** se filtran los elementos de una lista que aparecen en otra. Archivo: `Ejercicio4.hs`.
 
-## Cómo ejecutar
+## Ejecución
 
-Se necesita Python 3. No hay que instalar librerías adicionales.
+Se requiere GHC o GHCi (Haskell). Cada ejercicio es independiente y contiene su propia función `main`.
 
-Desde la carpeta del proyecto, ejecutar cada archivo por separado:
+Desde la carpeta del repositorio:
 
 ```bash
-python ejercicio1.py
-python ejercicio2.py
-python ejercicio3.py
-python ejercicio4.py
+runghc Ejercicio1.hs
+runghc Ejercicio2.hs
+runghc Ejercicio3.hs
+runghc Ejercicio4.hs
 ```
 
-En el primer ejercicio se solicita la clave por la cual se desea ordenar (`make`, `model` o `color`). En el segundo se solicita una potencia entera positiva. Los ejercicios 3 y 4 muestran ejemplos definidos dentro de sus archivos.
+También se pueden ejecutar en GHCi, uno a la vez:
 
-## Resultados de ejemplo
+```bash
+ghci Ejercicio1.hs
+```
 
-- Ejercicio 1, clave `model`: modelos `2, 7, 50, 216`.
-- Ejercicio 2, potencia `3`: `[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]`.
-- Ejercicio 3: la matriz `[[1, 2, 3], [4, 5, 6]]` se convierte en `[[1, 4], [2, 5], [3, 6]]`.
-- Ejercicio 4: `['rojo', 'verde', 'azul', 'gris', 'negro']`.
+Y luego escribir `main`.
+
+## Ejemplos de resultados
+
+- **Ejercicio 1:** con la clave `model`, los modelos aparecen en orden `2, 7, 50, 216`.
+- **Ejercicio 2:** con potencia `3`, se obtiene `[1,8,27,64,125,216,343,512,729,1000]`.
+- **Ejercicio 3:** `[[1,2,3],[4,5,6]]` se transforma en `[[1,4],[2,5],[3,6]]`.
+- **Ejercicio 4:** quedan `["rojo","verde","azul","gris","negro"]`.
