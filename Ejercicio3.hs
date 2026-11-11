@@ -1,10 +1,11 @@
-import Data.List (transpose)
-
 transponerMatriz :: [[Int]] -> [[Int]]
 transponerMatriz [] = []
 transponerMatriz matriz
-  | all (\fila -> length fila == length (head matriz)) matriz = transpose matriz
+  | all (\fila -> length fila == columnas) matriz =
+      map (\columna -> map (\fila -> fila !! columna) matriz) [0 .. columnas - 1]
   | otherwise = error "Las filas deben tener la misma longitud."
+  where
+    columnas = length (head matriz)
 
 main :: IO ()
 main = do
